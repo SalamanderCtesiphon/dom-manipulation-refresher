@@ -37,6 +37,18 @@ newDiv.appendChild(divText);
 container.appendChild(newDiv);
 
 const btn = document.querySelector("#btn");
-btn.onclick = () => alert("Hello World");
+btn.addEventListener("click", function (e) {
+  if(e.target.style.background === "blue") {
+    e.target.style.background = "none";
+  } else {
+    e.target.style.background = "blue";
+  };
+});
 
+const buttons = document.querySelectorAll("button");
 
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
+});
