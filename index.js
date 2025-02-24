@@ -36,3 +36,7 @@ newDiv.appendChild(divText);
 
 container.appendChild(newDiv);
 
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World");
+
+
